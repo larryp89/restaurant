@@ -1,21 +1,45 @@
 body {
-  background-color: lightblue;
+  background-color: gold;
+}
+
+header {
+  background-color: black;
+  height: 175px;
+}
+
+nav {
+  background-color: black;
 }
 
 nav button {
-  background: content-box;
+  color: gold;
+  border: none;
   margin: 10px 10px;
   width: 5rem;
   height: 2rem;
-  opacity: 1;
+  background-color: black;
+  font-family: fantasy;
+  width: fit-content;
+  font-size: 1.5rem
+
 }
 
+#home{
+    background-color: gold;
+    color:black;
+    width: 5em
+}
 nav button:hover {
   cursor: pointer;
-  font-weight: 900;
+  font-weight: 500;
 }
 
 #content {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-div {
   display: flex;
   flex-direction: column;
 }
