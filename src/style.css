@@ -1,45 +1,246 @@
 body {
-  background-color: gold;
+  background-color: #f0e68c; /* Softer gold background */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
 header {
-  background-color: black;
-  height: 175px;
+  background-color: #222;
+  padding: 20px 0;
 }
 
 nav {
-  background-color: black;
+  display: flex;
+  justify-content: center;
 }
 
 nav button {
-  color: gold;
+  color: #f0e68c;
   border: none;
-  margin: 10px 10px;
-  width: 5rem;
-  height: 2rem;
-  background-color: black;
-  font-family: fantasy;
-  width: fit-content;
-  font-size: 1.5rem
-
-}
-
-#home{
-    background-color: gold;
-    color:black;
-    width: 5em
-}
-nav button:hover {
+  margin: 0 15px;
+  padding: 10px 20px;
+  background-color: transparent;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
   cursor: pointer;
-  font-weight: 500;
+}
+
+nav button:hover {
+  background-color: #f0e68c;
+  color: #222;
+}
+
+#home {
+  background-color: #f0e68c;
+  color: #222;
 }
 
 #content {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  padding: 50px 20px;
 }
 
 .home-div {
+  max-width: 800px;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.main-title span {
+  color: #d4af37; /* Darker gold for contrast */
+}
+
+.tagline {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+.featured-section {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.featured-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.featured-dish {
+  margin-bottom: 20px;
+}
+
+.featured-dish h3 {
+  color: #d4af37;
+}
+
+.cta-button {
+  background-color: #222;
+  color: #f0e68c;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #d4af37;
+  color: #222;
+}
+
+/* Menu container styles */
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.menu-title {
+  text-align: center;
+  color: #222;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+/* Grid container */
+.menu-grid {
+  display: grid;
+  /* Create a grid with 2 columns, each taking up 1 fraction of the available space */
+  grid-template-columns: repeat(2, 1fr);
+  /* Set the gap between grid items */
+  gap: 30px;
+}
+
+/* Individual menu item styles */
+.menu-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  /* Use flexbox for internal layout of each menu item */
   display: flex;
   flex-direction: column;
 }
+
+.menu-item h3 {
+  color: #d4af37;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.menu-item p {
+  flex-grow: 1; /* Allow description to take up remaining space */
+  margin-bottom: 10px;
+}
+
+.menu-item .price {
+  align-self: flex-end; /* Align price to the right */
+  font-weight: bold;
+  color: #222;
+}
+
+/* Responsive design: switch to 1 column on smaller screens */
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr; /* Change to a single column */
+  }
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .contact-title {
+    text-align: center;
+    color: #222;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .contact-info {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .contact-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .contact-form h3 {
+    margin-top: 0;
+    color: #d4af37;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form textarea {
+    height: 150px;
+  }
+  
+  .contact-form button {
+    background-color: #222;
+    color: #f0e68c;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #d4af37;
+    color: #222;
+  }
+  
+  .map-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .map-section h3 {
+    margin-top: 0;
+    color: #d4af37;
+  }
+  
+  .map-placeholder {
+    background-color: #f0e68c;
+    border: 2px solid #d4af37;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 10px;
+    }
+  }
